@@ -23,6 +23,7 @@ export const passportError = (strategy) => {
 export const authorization = (rol) => {
   return async (request, response, next) => {
     console.log(request.user.user);
+    console.log(response);
     if (!request.user) {
       return response.status(401) / send({ error: "User no autorizado" });
     }

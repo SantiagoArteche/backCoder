@@ -5,14 +5,14 @@ import {
   currentSession,
   github,
   githubCallback,
+  login,
   logout,
   register,
-  testJWT,
 } from "../controllers/session.controller.js";
 
 const sessionRouter = Router();
 
-sessionRouter.post("/login", passport.authenticate("login"));
+sessionRouter.post("/login", passport.authenticate("login"), login);
 
 sessionRouter.post("/register", passport.authenticate("register"), register);
 
@@ -29,12 +29,6 @@ sessionRouter.get(
 );
 
 sessionRouter.get("/logout", logout);
-
-sessionRouter.get(
-  "/testJWT",
-  passport.authenticate("jwt", { session: false }),
-  testJWT
-);
 
 sessionRouter.get(
   "/current",

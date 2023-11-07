@@ -17,7 +17,7 @@ productRouter.get("/:pid", getProductById);
 productRouter.post(
   "/",
   passportError("jwt"),
-  authorization("admin"),
+  authorization("user"),
   postProduct
 );
 
