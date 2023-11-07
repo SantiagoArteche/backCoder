@@ -1,0 +1,14 @@
+<div id="showProducts">
+
+<h2 style="font-size: 50px;"> Bienvenido {{cookieName}} Rol: {{cookieRol}}</h2>
+
+<button id="deslogear" style="font-size: 50px;">Desloguear</button>
+{{#each getProducts}}
+<div>
+    <h1>{{this.title}} {{this.description}} {{this.price}} {{this.thumbnail}} {{this.code}} {{this.stock}} {{this.category}} {{this._id}}</h1>
+</div>
+{{/each}}
+
+</div>
+
+<button id="borrar">Borrar session</button>
