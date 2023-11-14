@@ -9,6 +9,7 @@ import {
   getCartById,
   changeCartQuantity,
 } from "../controllers/carts.controller.js";
+import { buy } from "../controllers/tickets.controllers.js";
 
 const cartRouter = Router();
 
@@ -27,5 +28,7 @@ cartRouter.put("/:cid", changeCartQuantity);
 cartRouter.delete("/:cid", clearCart);
 
 cartRouter.put("/:cid/products/:pid", changeProductQuantity);
+
+cartRouter.post("/:cid/purchase", buy);
 
 export default cartRouter;
