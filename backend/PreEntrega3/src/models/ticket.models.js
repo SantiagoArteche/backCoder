@@ -16,7 +16,7 @@ const codigo = new Code();
 
 const ticketSchema = new Schema(
   {
-    code: { type: String, required: true, default: codigo.cod },
+    code: { type: String, default: codigo.cod },
     purchase_datetime: { type: Date, default: Date.now },
     amount: { type: Number, required: true },
     purcharser: { type: String, required: true },
