@@ -1,0 +1,48 @@
+[31merror[39m: GET es / - 03:35:53
+[31merror[39m: GET es / - 03:35:53
+[31merror[39m: hola
+[31merror[39m: hola
+[32minfo[39m: GET es /error - 03:37:48
+[31merror[39m: hola
+[31merror[39m: hola
+[32minfo[39m: GET es /info - 03:37:52
+[32minfo[39m: hola
+[32minfo[39m: GET es /warning - 03:38:01
+[31mwarning[39m: hola
+[31mwarning[39m: hola
+[32minfo[39m: GET es /fatal - 03:38:04
+[32minfo[39m: GET es /fatal - 03:38:13
+[32minfo[39m: GET es /fatal - 03:38:13
+[32minfo[39m: GET es /fatal - 03:38:42
+[32minfo[39m: GET es /fatal - 03:38:44
+[32minfo[39m: GET es /fatal - 03:38:48
+[32minfo[39m: GET es /fatal - 03:38:58
+[32minfo[39m: GET es /fatal - 03:38:59
+[32minfo[39m: GET es /fatal - 03:38:59
+[32minfo[39m: GET es /fatal - 03:38:59
+[32minfo[39m: GET es /fatal - 03:38:59
+[32minfo[39m: GET es /fatal - 03:38:59
+[32minfo[39m: GET es /fatal - 03:39:00
+[32minfo[39m: GET es /fatal - 03:39:07
+[32minfo[39m: GET es /fatal - 03:40:12
+[34minfo[39m: GET es /fatal - 03:41:05
+[31mfatal[39m: hola
+[31mfatal[39m: hola
+[34minfo[39m: GET es /warning - 03:41:08
+[33mwarning[39m: hola
+[33mwarning[39m: hola
+[34minfo[39m: GET es /error - 03:41:24
+[34minfo[39m: GET es /error - 03:42:59
+[33merror[39m: hola
+[33merror[39m: hola
+[34minfo[39m: GET es /fatal - 03:43:05
+[31mfatal[39m: hola
+[31mfatal[39m: hola
+[34minfo[39m: GET es /warning - 03:43:09
+[36mwarning[39m: hola
+[36mwarning[39m: hola
+[34minfo[39m: GET es /info - 03:43:14
+[34minfo[39m: hola
+[34minfo[39m: GET es /debug - 03:43:17
+[34minfo[39m: GET es /debug - 03:43:31
+[34minfo[39m: GET es /debug - 03:43:37
