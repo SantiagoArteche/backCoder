@@ -118,7 +118,7 @@ export const deleteProduct = async (request, response) => {
   try {
     const prod = await productModel.findByIdAndDelete(id);
     if (prod) {
-      return response.status(200).send(prods);
+      return response.status(200).send(prod);
     }
     response.status(404).send({ error: "Producto no encontrado" });
   } catch (error) {
