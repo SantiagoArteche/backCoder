@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "main": "app.js",
   "scripts": {
-    "dev": "nodemon Desafio8/src/app.js",
+    "dev": "nodemon Desafio9/src/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -29,6 +29,8 @@
     "passport-jwt": "^4.0.1",
     "passport-local": "^1.0.0",
     "socket.io": "^4.7.2",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.0",
     "winston": "^3.11.0"
   }
 }
