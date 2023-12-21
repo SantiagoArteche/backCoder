@@ -38,7 +38,7 @@ mongoose
   })
   .catch((error) => console.log(error));
 
-const server = app.listen(PORT, () => {
+app.listen(PORT, () => {
   console.log(`Server on PORT ${PORT}`);
 });
 
@@ -103,7 +103,6 @@ app.get("/debug", (request, response) => {
   request.logger.debug("Debug");
   response.send("Hola!");
 });
-
 const swaggerOptions = {
   definition: {
     openapi: "3.1.0",
@@ -114,7 +113,5 @@ const swaggerOptions = {
   },
   apis: [`${__dirname}/docs/**/*.yaml`],
 };
-
 const specs = swaggerJSDoc(swaggerOptions);
-
 app.use("/apidocs", swaggerUiExpress.serve, swaggerUiExpress.setup(specs));

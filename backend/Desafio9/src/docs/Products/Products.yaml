@@ -1,9 +1,9 @@
 paths:
-  /api/products:
+  /api/products/:
     get:
       summary: Obtener a todos los productos
       tags:
-        - Products
+        - products
       responses:
         "200":
           description: Productos obtenidos correctamente
@@ -13,12 +13,51 @@ paths:
                 type: array
                 items:
                   $ref: "#/components/schemas/Products"
-        "500": Error interno del servidor
-  /api/products/{:pid}:
+        "500":
+          description: Error interno del servidor
+    post:
+      summary: Crear un nuevo productos
+      tags:
+        - products
+      parameters:
+        - name: body
+          in: body
+          required: true
+          schema:
+            type: object
+            properties:
+              _id:
+                type: objectId
+              title:
+                type: string
+              description:
+                type: string
+              price:
+                type: number
+              thumbnail:
+                type: array
+              code:
+                type: number
+              stock:
+                type: number
+              category:
+                type: string
+      responses:
+        "201":
+          description: Producto creado correctamente
+          content:
+            application/json:
+              schema:
+                items:
+                  $ref: "#/components/schemas/Products"
+        "500":
+          description: Error interno del servidor
+
+  /api/products/{pid}:
     get:
       summary: Obtener un producto en especifico
       tags:
-        - Products
+        - products
       parameters:
         - name: id
           in: path
@@ -32,9 +71,67 @@ paths:
           content:
             application/json:
               schema:
+                items:
+                  $ref: "#/components/schemas/Products"
+        "500":
+          description: Error interno del servidor
+    put:
+      summary: Actualizar producto
+      tags:
+        - products
+      parameters:
+        - name: body
+          in: body
+          required: true
+          schema:
+            type: object
+            properties:
+              _id:
+                type: objectId
+              title:
+                type: string
+              description:
+                type: string
+              price:
+                type: number
+              thumbnail:
                 type: array
-        "500": Error interno del servidor
-
+              code:
+                type: number
+              stock:
+                type: number
+              category:
+                type: string
+      responses:
+        "201":
+          description: Producto actualizado correctamente
+          content:
+            application/json:
+              schema:
+                items:
+                  $ref: "#/components/schemas/Products"
+        "500":
+          description: Error interno del servidor
+    delete:
+      summary: Borrar un producto
+      tags:
+        - products
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            $type: String
+      responses:
+        "201":
+          description: Producto borrado correctamente
+          content:
+            application/json:
+              schema:
+                items:
+                  $ref: "#/components/schemas/Products"
+        "500":
+          description: Error interno del servidor
 components:
   schemas:
     Products:

@@ -37,7 +37,7 @@ export const getProductById = async (request, response) => {
       return response.status(200).send(prods);
     }
 
-    response.status(404).send("Producto no encontrados");
+    return response.status(404).send("Producto no encontrados");
   } catch (error) {
     response
       .status(500)
